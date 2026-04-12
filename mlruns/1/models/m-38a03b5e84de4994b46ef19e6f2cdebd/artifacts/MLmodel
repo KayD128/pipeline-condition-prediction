@@ -1,0 +1,24 @@
+artifact_path: file:c:/Users/Kolade/Desktop/DayFigurez internship/Capstone project
+  2/mlruns/1/models/m-38a03b5e84de4994b46ef19e6f2cdebd/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.14.3
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.8.0
+    skops_trusted_types: null
+mlflow_version: 3.10.1
+model_id: m-38a03b5e84de4994b46ef19e6f2cdebd
+model_size_bytes: 1191
+model_uuid: m-38a03b5e84de4994b46ef19e6f2cdebd
+prompts: null
+run_id: d1dce9b0b5c94cee95c3cf3e1e49ffb6
+utc_time_created: '2026-04-06 10:23:21.959532'
