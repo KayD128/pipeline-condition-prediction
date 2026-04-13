@@ -2,7 +2,7 @@
 
 ## Overview
 This project focuses on predicting the condition of pipelines using machine learning. By gathering data, and being able to understand how the pipeline works,
-we can be able to withstand the damage a bad pipeline can cause
+we can be able to withstand the damage a bad pipeline can cause.
 
 The model classifies pipeline status into:
 - Normal
