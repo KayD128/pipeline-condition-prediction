@@ -65,12 +65,69 @@ The dataset contains pipeline operational data.
 
 Models used:
 - Logistic Regression
+- KNN Classifier
+- SVC (Support Vector Classifier) 
 - Decision Tree
 - Random Forest
 - XGBoost
 
 ### Steps:
 - Model training
-- Hyperparameter tuning
+- Hyperparameter tuning using GridSearchCV
+- Comparing metrics
+- Selection of the Best metrics
+- Using Pipeline to bring the preprocessing and modelling together in a model
 - Cross-validation
-- Handling class imbalance
+- Joblib dump
+
+## Model Evaluation
+
+Metrics:
+- Accuracy
+- Precision
+- Recall
+- F1 Score
+
+| Model           | Accuracy |
+|-----------------|----------|
+| Decision Tree         | 98%      |
+| Random Forest        | 98%      |
+| SVC       | 97.5%      |
+| KNN        | 68%      |
+| Logistic Regression        | 96.5%      |
+
+### I ended up using Random Forest Classifier for the work with hyperparameters:
+-  class_weight = None
+-  random_state = 42
+-  max_depth = 4
+-  min_samples_leaf = 4
+-  n_estimators = 100
+
+## Key Insights
+- Feature X strongly influences Critical condition
+- Thickness Loss greatly affects the Target variable
+- Moderate class has more data than the others
+- Model performs best with Random Forest Classifier
+- The cross validation shows how well the data performs. 3 out of 5 folds gives 0.99
+
+## Deployment
+
+The model is deployed using Streamlit on Render as host.
+
+### Run Locally:
+git clone https://github.com/KayD128/pipeline-condition-prediction.git
+cd root folder
+pip install -r requirements.txt
+streamlit run appipe.py
+
+### Live App:
+https://pipeline-condition-prediction.onrender.com/
+
+## Future Improvements
+- Add real-time data integration
+- Deploy with Docker
+- Bring in more data
+- Create a Dashboard with said Data
+
+## License
+MIT License
